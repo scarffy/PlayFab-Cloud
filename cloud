@@ -1,0 +1,12 @@
+handlers.grantCharacterToMe = function (args, context) {
+    var request = {
+        PlayFabId: currentPlayerId,
+        CharacterName: "FighterDude",
+        CharacterType: "Blue Warrior"
+    };
+    // The pre-defined "server" object has functions corresponding to each PlayFab server API 
+    // (https://api.playfab.com/Documentation/Server). It is automatically 
+    // authenticated as your title and handles all communication with 
+    // the PlayFab API, so you don't have to write extra code to issue HTTP requests. 
+    return server.GrantCharacterToUser(request);
+};
